@@ -40,8 +40,7 @@ namespace Pratical.Pages
                 var json = file.ReadToEnd();
                 Dictionary<string, object> result = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
                 string contacts = result["employee_list"].ToString();
-                List<EmployeeModel> objResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EmployeeModel>>(contacts);
-                EmployeeItems.ItemsSource = objResponse;
+               
             }
         }
 

@@ -13,9 +13,9 @@
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="model:EmployeeModel">
                 <StackPanel>
-                    <TextBlock x:Name="{x:Bind name}"/>
-                    <TextBlock x:Name="{x:Bind role}"/>
-                    <TextBlock x:Name="{x:Bind birthyear}"/>
+                    <TextBlock Text="{x:Bind name}"/>
+                    <TextBlock Text="{x:Bind role}"/>
+                    <TextBlock Text="{x:Bind birthyear}"/>
                 </StackPanel>
             </DataTemplate>
         </ListView.ItemTemplate>
