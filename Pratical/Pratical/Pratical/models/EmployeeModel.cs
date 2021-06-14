@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace Pratical.models
 {
+    class Employee
+    {
+        public List<EmployeeModel> employee_list { get; set; }
+    }
     class EmployeeModel
     {
         public string name { get; set; }

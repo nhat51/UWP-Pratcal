@@ -13,7 +13,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Newtonsoft.Json;
 using Pratical.models;
+using Pratical.Service;
 
 
 
@@ -29,21 +31,21 @@ namespace Pratical.Pages
         public EmployeeList()
         {
             this.InitializeComponent();
-            
+            getEMP();
         }
 
-        private void List_Employee_Loaded(object sender, RoutedEventArgs e)
+        public async void getEMP()
         {
-            string FilePath = Path.Combine(Package.Current.InstalledLocation.Path, "employee.json");
-            using (StreamReader file = File.OpenText(FilePath))
+            FileHandleService readFile = new FileHandleService();
+            EmployeeModel employee = await readFile.ReadJson();
+            if (employee != null)
             {
-                var json = file.ReadToEnd();
-                Dictionary<string, object> result = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
-                string contacts = result["employee_list"].ToString();
-               
+                List_Employee.ItemsSource = employee.employee_list;
             }
+
         }
+
 
     }
-    
+
 }
