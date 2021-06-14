@@ -1,0 +1,13 @@
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\Pratical.csprojAssemblyReference.cache
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\App.g.i.cs
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\App.g.cs
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\MainPage.g.i.cs
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\MainPage.g.cs
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\Pages\EmployeeList.g.i.cs
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\Pages\EmployeeList.g.cs
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\App.xaml
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\MainPage.xaml
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\Pages\EmployeeList.xaml
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\App.xbf
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\MainPage.xbf
+D:\Ki2\UWP-Pratcal\Pratical\Pratical\Pratical\obj\x86\Debug\Pages\EmployeeList.xbf
