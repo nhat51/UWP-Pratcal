@@ -168,7 +168,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Json\employee.json" />
+    <None Include="employee.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

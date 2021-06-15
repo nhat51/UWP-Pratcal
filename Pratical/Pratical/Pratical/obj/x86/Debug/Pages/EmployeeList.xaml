@@ -9,12 +9,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <ListView x:Name="List_employee" Margin="20" Width="300" HorizontalAlignment="Left">
+    <ListView x:ConnectionId='2' x:Name="List_employee" Margin="20" Width="300" HorizontalAlignment="Left">
         <ListView.Header>
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
 
-                    <Button Margin="10" Content="Load Employee" Click="getEMP"/>
+                    <Button x:ConnectionId='3' Margin="10" Content="Load Employee"               />
                 </StackPanel>
                 <TextBlock Margin="0,20,0,20" Text="Employee List:"/>
 
@@ -23,7 +23,7 @@
 
         </ListView.Header>
         <ListView.ItemTemplate>
-            <DataTemplate x:DataType="model:EmployeeModel">
+            <DataTemplate                                 >
                 <StackPanel Orientation="Horizontal" Margin="10,30,0,0">
                     <TextBlock  Height="50" Width="100" Text="{Binding name}"/>
                     <TextBlock Margin="20,0,0,0" Width="50" Text="{Binding role}"/>
@@ -33,3 +33,4 @@
         </ListView.ItemTemplate>
     </ListView>
 </Page>
+

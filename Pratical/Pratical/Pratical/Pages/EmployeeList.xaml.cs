@@ -31,19 +31,43 @@ namespace Pratical.Pages
         public EmployeeList()
         {
             this.InitializeComponent();
-            getEMP();
+            Write_file();
         }
-
-        public async void getEMP()
+        private async void getEMP(object sender, RoutedEventArgs e)
         {
             FileHandleService readFile = new FileHandleService();
-            EmployeeModel employee = await readFile.ReadJson();
+            Employee employee = await readFile.ReadJson("employee.json");
             if (employee != null)
             {
-                List_Employee.ItemsSource = employee.employee_list;
+                List_employee.ItemsSource = employee.employee_list;
             }
 
         }
+        private void Write_file()
+        {
+            string json = @"{
+            'employee_list': [
+        {
+          'name': 'Peter Parker',
+          'role': 'Developer',
+          'birthyear': 1990
+         },
+        {
+          'name': 'Tom Hank',
+          'role': 'Tester',
+          'birthyear': 1991
+        },
+        {
+          'name': 'Mary Jane',
+          'role': 'QA',
+          'birthyear': 1994
+    }
+  ]
+}";
+            FileHandleService.WriteFile("employee.json", json);
+        }
+
+
 
 
     }

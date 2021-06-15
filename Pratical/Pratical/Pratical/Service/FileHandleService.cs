@@ -11,12 +11,18 @@ namespace Pratical.Service
 {
     class FileHandleService
     {
-        public async Task<models.EmployeeModel> ReadJson()
+        public static async void WriteFile(string fileName, string content)
         {
             var storage = ApplicationData.Current.LocalFolder;
-            var EmpJson = await storage.CreateFileAsync("employee.json", CreationCollisionOption.OpenIfExists);
+            var Jsonfile = await storage.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(Jsonfile, content);
+        }
+        public async Task<models.Employee> ReadJson(string fileName)
+        {
+            var storage = ApplicationData.Current.LocalFolder;
+            var EmpJson = await storage.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
             var Jsontext = await FileIO.ReadTextAsync(EmpJson);
-            models.EmployeeModel employee = JsonConvert.DeserializeObject<models.EmployeeModel>(Jsontext);
+            models.Employee employee = JsonConvert.DeserializeObject<models.Employee>(Jsontext);
             return employee;
         }
     }
